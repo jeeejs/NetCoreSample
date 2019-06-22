@@ -13,6 +13,7 @@ namespace PersonMicroservice.Repository
         void InsertPerson(Person person);
         void DeletePerson(long personId);
         void UpdatePerson(Person person);
+        PersonAuth Login(Person person);
         void Save();
     }
 }

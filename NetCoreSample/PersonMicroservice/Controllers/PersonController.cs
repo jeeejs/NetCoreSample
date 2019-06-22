@@ -49,6 +49,12 @@ namespace PersonMicroservice.Controllers
             }
         }
 
+        [HttpPost("login")]
+        public PersonAuth Login([FromBody] Person person)
+        {
+            return _personRepository.Login(person);
+        }
+
         // PUT: api/Person/5
         [HttpPut]
         public IActionResult Put(long id, [FromBody] Person person)

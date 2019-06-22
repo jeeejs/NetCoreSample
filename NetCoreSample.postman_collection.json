@@ -1,0 +1,84 @@
+{
+	"id": "6ea76596-ea12-d951-1d1a-dea1a70ab7ec",
+	"name": "NetCoreSample",
+	"description": "",
+	"order": [
+		"a6da7b0f-248f-fbe0-d7a5-e2c7fd99d82b",
+		"559b3f5f-9e4c-0767-6989-c6b4e1f64f1c"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1561233698351,
+	"owner": "1447399",
+	"public": false,
+	"requests": [
+		{
+			"id": "559b3f5f-9e4c-0767-6989-c6b4e1f64f1c",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiYWM0NTQ2NmUtOTgxMi00OWRlLWIyZmMtNWM3ZDA5M2RiOTYzIiwiaWF0IjoiMjIvMDYvMjAxOSAxOTo1ODoxMyIsIm5iZiI6MTU2MTIzMzQ5MywiZXhwIjoxNTYxMjMzNzkzLCJpc3MiOiJTYW1wbGVJc3N1ZXIiLCJhdWQiOiJTYW1wbGVBdWRpZW5jZSJ9.XWlS4jc3fQgWDE0tkrUHNPELJeuQ1T89u9_z4ThqXJY\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwianRpIjoiYWM0NTQ2NmUtOTgxMi00OWRlLWIyZmMtNWM3ZDA5M2RiOTYzIiwiaWF0IjoiMjIvMDYvMjAxOSAxOTo1ODoxMyIsIm5iZiI6MTU2MTIzMzQ5MywiZXhwIjoxNTYxMjMzNzkzLCJpc3MiOiJTYW1wbGVJc3N1ZXIiLCJhdWQiOiJTYW1wbGVBdWRpZW5jZSJ9.XWlS4jc3fQgWDE0tkrUHNPELJeuQ1T89u9_z4ThqXJY",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:50947/person/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "6ea76596-ea12-d951-1d1a-dea1a70ab7ec",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Get Person",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1561233719136,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"Email\":\"user@mail.com\",\n\t\"Password\":\"123\"\n}"
+		},
+		{
+			"id": "a6da7b0f-248f-fbe0-d7a5-e2c7fd99d82b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:50947/person/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "6ea76596-ea12-d951-1d1a-dea1a70ab7ec",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Login",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1561233704434,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"Email\":\"user@mail.com\",\n\t\"Password\":\"123\"\n}"
+		}
+	]
+}
