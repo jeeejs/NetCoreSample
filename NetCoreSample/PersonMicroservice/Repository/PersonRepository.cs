@@ -17,14 +17,14 @@ namespace PersonMicroservice.Repository
             _dbContext = dbContext;
         }
 
-        public void DeletePerson(int personId)
+        public void DeletePerson(long personId)
         {
             var person = _dbContext.Persons.Find(personId);
             _dbContext.Persons.Remove(person);
             Save();
         }
 
-        public Person GetPersonByID(int personId)
+        public Person GetPersonByID(long personId)
         {
             return _dbContext.Persons.Find(personId);
         }

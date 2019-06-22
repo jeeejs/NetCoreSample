@@ -9,9 +9,9 @@ namespace PersonMicroservice.Repository
     public interface IPersonRepository
     {
         IEnumerable<Person> GetPersons();
-        Person GetPersonByID(int personId);
+        Person GetPersonByID(long personId);
         void InsertPerson(Person person);
-        void DeletePerson(int personId);
+        void DeletePerson(long personId);
         void UpdatePerson(Person person);
         void Save();
     }

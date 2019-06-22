@@ -31,7 +31,7 @@ namespace PersonMicroservice.Controllers
 
         // GET: api/Person/5
         [HttpGet("{id}", Name = "Get")]
-        public IActionResult Get(int id)
+        public IActionResult Get(long id)
         {
             var persons = _personRepository.GetPersonByID(id);
             return new OkObjectResult(persons);
@@ -51,7 +51,7 @@ namespace PersonMicroservice.Controllers
 
         // PUT: api/Person/5
         [HttpPut]
-        public IActionResult Put(int id, [FromBody] Person person)
+        public IActionResult Put(long id, [FromBody] Person person)
         {
             if (person != null)
             {
@@ -67,7 +67,7 @@ namespace PersonMicroservice.Controllers
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(long id)
         {
             _personRepository.DeletePerson(id);
             return new OkResult();
