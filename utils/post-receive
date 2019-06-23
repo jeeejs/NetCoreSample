@@ -1,0 +1,6 @@
+#!/bin/sh
+echo 'Aqui deve ser feito o necessario para atualizar a aplicação em questao'
+echo 'Exemplo :'
+echo 'cd fullpath'
+echo 'env -i git pull origin master'
+echo 'dotnet build -c Release -o deployfullpath'
