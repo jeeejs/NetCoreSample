@@ -35,9 +35,28 @@ namespace PersonMicroservice.Repository
             return _dbContext.Persons.Find(personId);
         }
 
-        public IEnumerable<Person> GetPersons()
+        public Person GetPersonByEmail(string email)
         {
-            return _dbContext.Persons.ToList();
+            try
+            {
+                return _dbContext.Persons.SingleOrDefault(p => p.Email == email);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public List<Person> GetPersons()
+        {
+            try
+            {
+                return _dbContext.Persons.ToList();
+            } 
+            catch(Exception ex)
+            {
+                return null;
+            }
         }
 
         public void InsertPerson(Person person)

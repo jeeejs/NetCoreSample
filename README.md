@@ -4,7 +4,7 @@
 This project use .NET Core 2.1
 
 
-##Step 1:
+## Step 1:
 Add Crud Microservice Person
 
 To configure database use: Entity Framework Core Migrations
@@ -13,7 +13,7 @@ Sample comands in Person project:
 
 > update-database
 
-##Step 2:
+## Step 2:
 Make a api gateway
 
 Using Ocelot to gateway, version installed is: 13.4.1
@@ -29,20 +29,23 @@ Login implementation on microservice
 Applyed JWT to autenticathion.
 
 
-##Step 3:
+## Step 3:
 Make view app, create new react app.
 Apply designated layout.
 
 Configure CORS policy.
 
-##Step 4:
+## Step 4:
 Make sample hook 'post-receive' file in './.git/hooks' this repository in './utils/'
 Is a simple example of how the project could be configured on the server by monitoring some commit in the master and automatically deploy.
 
 To similar solution in AWS you can see CodeDeploy
 
-##Step 5:
-Unit test
+## Step 5:
+Unit test, applied in crud. (result print in ./util folder).
+
+Make a general test on solution, its working !
+To run, please review endpoints configuration, and run all projects to success.
 
 
 #Future steps: 
@@ -52,6 +55,8 @@ Unit test
 2 - Improve session controller in client app.
 
 3 - Review react techniques (pages components, styles), this is my first project on react.
+
+4 - Implement and treat exceptions ways.
 
 PS:
 utils have live a demo video, and postman sample colection.

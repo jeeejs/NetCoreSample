@@ -8,8 +8,9 @@ namespace PersonMicroservice.Repository
 {
     public interface IPersonRepository
     {
-        IEnumerable<Person> GetPersons();
+        List<Person> GetPersons();
         Person GetPersonByID(long personId);
+        Person GetPersonByEmail(string email);
         void InsertPerson(Person person);
         void DeletePerson(long personId);
         void UpdatePerson(Person person);
