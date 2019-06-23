@@ -28,6 +28,17 @@ Login implementation on microservice
 Applyed JWT to autenticathion.
 
 
+Step 3:
+Make view app, create new react app.
+Apply designated layout.
+
+Configure CORS policy.
+
+
 
 Future steps: 
 1 - Improve token generation mechanism and standardize keys and information.
+2 - Improve session controller in client app.
+
+PS:
+utils have live a demo video, and postman sample colection.

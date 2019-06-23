@@ -23,7 +23,6 @@ namespace GatewayAPI
             var builder = new Microsoft.Extensions.Configuration.ConfigurationBuilder();
             builder.SetBasePath(env.ContentRootPath)
                    .AddJsonFile("appsettings.json")
-                   //add configuration.json
                    .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true)
                    .AddEnvironmentVariables();
 
@@ -61,6 +60,15 @@ namespace GatewayAPI
                 x.TokenValidationParameters = tokenValidationParameters;
             });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+            });
+
             services.AddOcelot(Configuration);           
         }
 
@@ -68,6 +76,7 @@ namespace GatewayAPI
         public async void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseAuthentication();
+            app.UseCors("CorsPolicy");
             await app.UseOcelot();
         }
     }
