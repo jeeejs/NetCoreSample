@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 
 import LogoImg from "../../assets/logo.svg";
-import api from "../../services/api";
-import { login, getUser, getToken } from "../../services/auth";
+import { getUser } from "../../services/auth";
 
 import { Form, Container } from "./styles";
 
@@ -18,18 +17,7 @@ class Home extends Component {
 
   handleHome = async e => {
     e.preventDefault();
-    
-    try {
-        const response = await api.get("/person/"+getUser());
-        response.data.token = getToken();
-        this.setState(response.data);
-    } catch (err) {
-        console.log(JSON.stringify(err));
-        this.setState({
-            error:
-            "Usuário não autenticado !"
-        });
-    }    
+    this.setState(await getUser());
   };
 
   render() {

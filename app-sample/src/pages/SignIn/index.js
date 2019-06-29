@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 
 import LogoImg from "../../assets/logo.svg";
-import api from "../../services/api";
-import { login, setUser } from "../../services/auth";
+import { login } from "../../services/auth";
 
 import { Form, Container } from "./styles";
 
@@ -17,27 +16,13 @@ class SignIn extends Component {
   handleSignIn = async e => {
     e.preventDefault();
     const { email, password } = this.state;
-    login(null);
-    setUser(null);
-    if (!email || !password) {
-      this.setState({ error: "Preencha e-mail e senha para continuar!" });
+    const authenticated = await login(email, password);
+    if (authenticated.success){
+      this.props.history.push("/home");
     } else {
-      try {
-        const response = await api.post("/person/login", { email, password });
-        if(response.data.authenticated == true){
-          login(response.data.token);
-          setUser(response.data.id);
-          this.props.history.push("/home");
-        } else {
-          this.setState({ error: response.data.error });
-        }
-      } catch (err) {
-        console.log(JSON.stringify(err));
-        this.setState({
-          error:
-            "Houve um problema com o login, verifique seus dados"
-        });
-      }
+      this.setState({
+        error: authenticated.error
+      });
     }
   };
 

@@ -47,8 +47,11 @@ Unit test, applied in crud. (result print in ./util folder).
 Make a general test on solution, its working !
 To run, please review endpoints configuration, and run all projects to success.
 
+## Step 6:
+Adding jest test to auth in react app.
+(result print in ./util folder)
 
-#Future steps: 
+# Future steps: 
 
 1 - Improve token generation mechanism and standardize keys and information.
 
